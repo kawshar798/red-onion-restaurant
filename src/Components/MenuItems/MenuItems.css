@@ -1,0 +1,35 @@
+ul.menu-item-nav {
+    list-style: none;
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+ul.menu-item-nav li {
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0px 5px;
+    margin-bottom: 0px;
+}
+
+.singleItem {
+    text-align: center;
+    background: white;
+    box-shadow: 1px 1px 8px 0px #0000003d;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 25px;
+}
+.singleItem h2 {
+    font-size: 18px;
+    padding-top: 25px;
+
+}
+.price {
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}

@@ -1,0 +1,41 @@
+.banner{
+    background: url('../../images/bannerbackground.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 550px;
+
+}
+.baner-inner h2 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+}
+.search-form {
+    display: flex;
+    
+    padding: 5px;
+    width: 351px;
+    margin: 0 auto;
+}
+.search-form input {
+    width: 80%;
+    border: none;
+    padding: 6px 10px;
+    background: #fff;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+.search-form input:focus {
+    outline: none;
+}
+.search-form button {
+    width: 30%;
+    border-radius: 20px;
+    border: none;
+    background: red;
+    color: #fff;
+    display: block;
+    text-transform: capitalize;
+    font-weight: 500;
+}

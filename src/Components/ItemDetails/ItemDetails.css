@@ -1,0 +1,29 @@
+button:focus {
+    outline: none;
+}
+.add-to-cart-btn {
+    border: none;
+    background: red;
+    color: #fff;
+    padding: 6px 25px;
+    border-radius: 32px;
+}
+.calculate-product {
+    padding: 0px 10px;
+    border: 1px solid #000;
+    margin-left: 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+button.btn-minus,button.btn-plus {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    padding: 0px 15px;
+    /* background: red; */
+    font-size: 18px;
+}
+
+

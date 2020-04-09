@@ -3,6 +3,7 @@ a:hover{
 }
 .header{
 padding: 15px 0px;
+border-bottom: 1px solid #00000030;
 }
 .logo img{
     width: 150px;

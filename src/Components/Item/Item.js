@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
-    const { img, name, des, price, key } = props.item
+    const { img, name,shortdes,price, key } = props.item
 
     return (
         <>
@@ -11,7 +11,7 @@ const Item = (props) => {
                     <div className="singleItem">
                         <img src={img} alt="" className="img-fluid" />
                         <h2>{name}</h2>
-                        <p>{des}</p>
+                        <p>{shortdes}</p>
                         <p className="price">${price}</p>
                     </div>
                 </Link>

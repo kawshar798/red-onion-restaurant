@@ -12,8 +12,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750539706_5335306237_c.jpg",
         "price": 57.99,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Drain, rinse, then place in a pan covered with water.Bring to the boil."
+        "shortdes":"Drain, rinse, then place in a pan covered with water.Bring to the boil.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
     {
         "key": "B00QPCKZWM",
@@ -28,8 +28,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750539706_5335306237_c.jpg",
         "price": 97.99,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Peppers, onion, green beans, baby sweetcorn & chilli in a spicy lemongrass sauce."
+        "shortdes":"Peppers, onion, green beans, baby sweetcorn & chilli in a spicy lemongrass sauce.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
     {
         "key": "B0QCUTKZWM",
@@ -44,8 +44,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750001143_d07f9e9c2f_c.jpg",
         "price": 69.98,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Peppers, onion, green beans, chilli & basil in a fish sauce."
+        "shortdes":"Peppers, onion, green beans, chilli & basil in a fish sauce.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
     {
         "key": "B00OSTKZQX",
@@ -60,8 +60,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750001103_bc1d9e24e0_c.jpg",
         "price": 91.99,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Green curry with coconut milk, basil, green beans,bamboo shoots & peppers."
+        "shortdes":"Green curry with coconut milk, basil, green beans,bamboo shoots & peppers.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
     {
         "key": "B00OSTQOPM",
@@ -76,8 +76,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750000858_6122173eea_c.jpg",
         "price": 79.00,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Yellow curry with coconut milk, onions, potatoes &  carrots."
+        "shortdes":"Yellow curry with coconut milk, onions, potatoes &  carrots.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
     {
         "key": "AZXOSTKZWM",
@@ -92,8 +92,8 @@ var breakfast = [
         "img": "https://live.staticflickr.com/65535/49750539466_939690ef41_z.jpg",
         "price": 12.99,
         "shipping": 3.99,
-        "shortdes":"Soak the beans overnight in plenty of water.",
-        "des":"Stir fried rice with egg, peppers, onions, carrot, tomato, broccoli, cabbage & spring onions."
+        "shortdes":"Stir fried rice with egg, peppers, onions, carrot, tomato, broccoli, cabbage & spring onions.",
+        "des":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s."
     },
   
     

@@ -3,7 +3,7 @@ button:focus {
 }
 .add-to-cart-btn {
     border: none;
-    background: red;
+    background: #dc3545;
     color: #fff;
     padding: 6px 25px;
     border-radius: 32px;

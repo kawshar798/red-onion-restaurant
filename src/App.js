@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Header from './Components/Header/Header'
 import Banner from './Components/Baner/Baner';
 import MenuItems from './Components/MenuItems/MenuItems';
+import Footer from './Components/Footer/Footer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,12 +14,14 @@ import {
 import ItemDetails from './Components/ItemDetails/ItemDetails';
 import Notfound from './Components/Notfound/Notfound';
 function App() {
+
+  const cartHandler = () =>{
+    console.log('food added')
+  }
   return (
     <div className="App">
 
-
       <Router>
-
         <Switch>
           <Route exact path="/">
             <Header></Header>
@@ -27,7 +30,7 @@ function App() {
           </Route>
           <Route path="/food/:foodKey">
           <Header></Header>
-            <ItemDetails> </ItemDetails>
+            <ItemDetails cartHandler={cartHandler}> </ItemDetails>
           </Route>
           <Route path="*">
           <Notfound />
@@ -36,7 +39,7 @@ function App() {
         </Switch>
        
       </Router>
-
+<Footer />
 
     </div>
   );

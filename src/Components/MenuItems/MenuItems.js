@@ -7,6 +7,8 @@ const MenuItems = () => {
     const [foodItems,setFoodItems] = useState(fakeData);
     const [selectedItem, setSelectedItem] = useState("breakfast");
               const slectedItems =   foodItems.filter(item => item.category ===selectedItem)
+
+            
     return (
         <div className="container">
             <div className="row">
@@ -19,7 +21,7 @@ const MenuItems = () => {
                     </ul>
                 </div>
                     
-                  { slectedItems.map( item => <Item  item={item}  key={item.key} />)}
+                {slectedItems.map(item => <Item item={item}  />)}
               
 
             </div>

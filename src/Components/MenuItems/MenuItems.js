@@ -21,7 +21,7 @@ const MenuItems = () => {
                     </ul>
                 </div>
                     
-                {slectedItems.map(item => <Item item={item}  />)}
+                {slectedItems.map(item => <Item item={item} key={item.key} />)}
               
 
             </div>

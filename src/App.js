@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
 import Header from './Components/Header/Header'
@@ -13,10 +13,21 @@ import {
 } from "react-router-dom";
 import ItemDetails from './Components/ItemDetails/ItemDetails';
 import Notfound from './Components/Notfound/Notfound';
+import Features from './Components/Features/Features';
 function App() {
 
-  const cartHandler = () =>{
-    console.log('food added')
+  const [cart, setCart] = useState([]);
+  const cartHandler = (data) => {
+    const alreadyAdd = cart.find(cart => cart.key == data.key);
+    const newCart = [...cart, data]
+    setCart(newCart);
+    if (alreadyAdd) {
+      const remainCat = cart.filter(cart => cart.key != data)
+      setCart(remainCat);
+    } else {
+      const newCart = [...cart, data]
+      setCart(newCart);
+    }
   }
   return (
     <div className="App">
@@ -24,22 +35,23 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header></Header>
+            <Header cart={cart.length}></Header>
             <Banner></Banner>
             <MenuItems />
+            <Features />
           </Route>
           <Route path="/food/:foodKey">
-          <Header></Header>
+            <Header cart={cart.length}></Header>
             <ItemDetails cartHandler={cartHandler}> </ItemDetails>
           </Route>
           <Route path="*">
-          <Notfound />
+            <Notfound />
 
-        </Route>
+          </Route>
         </Switch>
-       
+
       </Router>
-<Footer />
+      <Footer />
 
     </div>
   );

@@ -1,0 +1,31 @@
+h2.feature-title {
+    margin: 0;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+h2.feature-title span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    /* background: #7ac948; */
+    background: #e51a4b;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+.seemore-btn span {
+    color: #7ac948;
+}
+.card.feature-card{
+    border: none;
+    transition: .3s all;
+}
+.card.feature-card:hover{
+   
+    box-shadow: 1px 7px 13px 4px #0000001f;
+    transform: translateY(5px);
+}

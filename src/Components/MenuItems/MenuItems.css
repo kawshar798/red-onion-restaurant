@@ -18,10 +18,12 @@ ul.menu-item-nav li {
 .singleItem {
     text-align: center;
     background: white;
-    box-shadow: 1px 1px 8px 0px #0000003d;
+   transition: .3s all;
     border-radius: 5px;
     padding: 10px 30px;
     margin-bottom: 25px;
+    color: #000;
+    min-height: 476px;
 }
 .singleItem h2 {
     font-size: 18px;
@@ -32,4 +34,7 @@ ul.menu-item-nav li {
     margin-bottom: 0px;
     font-size: 18px;
     font-weight: 500;
+}
+.singleItem:hover{
+    box-shadow: 1px 1px 8px 0px #0000003d;
 }

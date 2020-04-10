@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from '../../images/logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,7 +10,7 @@ import {
 } from "react-router-dom";
 import './Header.css'
 
-const Header = () => {
+const Header = (props) => {
     return (
  <div className="header">
             <div className="container">
@@ -21,7 +23,7 @@ const Header = () => {
                 </div>
                 <div className="col-lg-8 d-flex justify-content-end">
                     <nav className="d-flex align-items-center">
-                    <a href="#">Cart</a>
+    <a href="#"><FontAwesomeIcon className="cart-icon" icon={faCartArrowDown} /><span>{props.cart}</span></a>
                     <a href="#">Login</a>
                     <a href="#">Sign Up</a>
                     </nav>

@@ -15,6 +15,7 @@ import ItemDetails from './Components/ItemDetails/ItemDetails';
 import Notfound from './Components/Notfound/Notfound';
 import Features from './Components/Features/Features';
 import Login from './Components/Login/Login';
+import { AuthContextProvider } from './Components/Login/useAuth';
 function App() {
 
   const [cart, setCart] = useState([]);
@@ -32,32 +33,33 @@ function App() {
   }
   return (
     <div className="App">
-{ console.log(cart)}
-      <Router>
-        <Switch>
+      <AuthContextProvider>
 
-          <Route exact path="/">
-            <Header cart={cart.length}></Header>
-            <Banner></Banner>
-            <MenuItems />
-            <Features />
-          </Route>
-          <Route path="/food/:foodKey">
-            <Header cart={cart.length}></Header>
-            <ItemDetails cartHandler={cartHandler}> </ItemDetails>
-          </Route>
-          <Route path="/login">
-            <Header cart={cart.length}></Header>
-            <Login />
-          </Route>
-          <Route path="*">
-            <Notfound />
-          </Route>
-        </Switch>
+        <Router>
+          <Switch>
 
-      </Router>
-      <Footer />
+            <Route exact path="/">
+              <Header cart={cart.length}></Header>
+              <Banner></Banner>
+              <MenuItems />
+              <Features />
+            </Route>
+            <Route path="/food/:foodKey">
+              <Header cart={cart.length}></Header>
+              <ItemDetails cartHandler={cartHandler}> </ItemDetails>
+            </Route>
+            <Route path="/login">
+              <Header cart={cart.length}></Header>
+              <Login />
+            </Route>
+            <Route path="*">
+              <Notfound />
+            </Route>
+          </Switch>
 
+        </Router>
+        <Footer />
+      </AuthContextProvider>
     </div>
   );
 }

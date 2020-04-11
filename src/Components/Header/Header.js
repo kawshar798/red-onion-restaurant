@@ -9,8 +9,11 @@ import {
     Link
 } from "react-router-dom";
 import './Header.css'
+import { useAuth } from '../Login/useAuth';
 
 const Header = (props) => {
+//    const auth =  useAuth();
+//     console.log(auth)
     return (
         <div className="header">
             <div className="container">

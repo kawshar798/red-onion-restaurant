@@ -4,11 +4,12 @@ import logo from '../../images/logo.png'
 import './Login.css'
 const Login = () => {
     const auth = Auth();
-    console.log(auth.signInWithGoogle);
+    console.log(auth);
     return (
         <div className="sign-up-area">
             <div className="container pt-5 pb-5">
                 <h2>login page</h2>
+                {/* <button onClick={auth.signInWithGoogle}>Sign in with google </button> */}
                 {
                     auth.user ? <button onClick={auth.signOut}>Sign in Out </button> : <button onClick={auth.signInWithGoogle}>Sign in with google </button>
                 }

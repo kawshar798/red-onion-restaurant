@@ -14,6 +14,7 @@ import {
 import ItemDetails from './Components/ItemDetails/ItemDetails';
 import Notfound from './Components/Notfound/Notfound';
 import Features from './Components/Features/Features';
+import Login from './Components/Login/Login';
 function App() {
 
   const [cart, setCart] = useState([]);
@@ -34,6 +35,7 @@ function App() {
 
       <Router>
         <Switch>
+
           <Route exact path="/">
             <Header cart={cart.length}></Header>
             <Banner></Banner>
@@ -44,9 +46,12 @@ function App() {
             <Header cart={cart.length}></Header>
             <ItemDetails cartHandler={cartHandler}> </ItemDetails>
           </Route>
+          <Route path="/login">
+            <Header cart={cart.length}></Header>
+            <Login />
+          </Route>
           <Route path="*">
             <Notfound />
-
           </Route>
         </Switch>
 

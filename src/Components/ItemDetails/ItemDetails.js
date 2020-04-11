@@ -18,10 +18,11 @@ const ItemDetails = (props) => {
     const [addItem, setAddItem] = useState(false);
     const foodItem = foodItems.find(item => item.key == foodKey)
     const handlerCart = (currentItem) => {
-
+        currentItem.quantity = quantity;
         props.cartHandler(currentItem)
         setAddItem(true)
     }
+     const [quantity,setQuantity] = useState(1);
     return (
         <div className="container pt-5 bp-5">
             <div className="row">
@@ -31,7 +32,7 @@ const ItemDetails = (props) => {
                     <div className="d-flex my-4">
                         <h2>${foodItem.price}</h2>
                         <div className="calculate-product">
-                            <button className="btn-plus">+</button> 1 <button className=" btn-minus">-</button>
+                            <button className="btn-plus" onClick={ () => setQuantity( quantity <=1?1:quantity -1)}>-</button> {quantity}<button onClick={ () => setQuantity(quantity +1)} className=" btn-minus">+</button>
                         </div>
                     </div>
 

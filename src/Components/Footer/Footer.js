@@ -10,7 +10,7 @@ const ItemDetails = () => {
                         <img src={Logo} alt="white footer"  className="img-fluid footer-img"/>
                     </div>
                     <div className="col-lg-3">
-                        <ul class="footer-list">
+                        <ul className="footer-list">
                             <li>About Online Food</li>
                             <li>Read Our Blog</li>
                             <li>Sign Up To Deliver</li>
@@ -18,7 +18,7 @@ const ItemDetails = () => {
                         </ul>
                     </div>
                     <div className="col-lg-3">
-                        <ul class="footer-list" >
+                        <ul className="footer-list" >
                             <li>Get Help</li>
                             <li>Read FAQ</li>
                             <li>View All Cities</li>

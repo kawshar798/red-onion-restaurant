@@ -21,7 +21,7 @@ const Features = () => {
 
         },
         {
-            "key": "B001STKY12",
+            "key": "B0090STKY12",
             "title": 'Home Delivery',
             "icon":<FontAwesomeIcon className="icon" icon={faTruck} />,
             'img':'https://red-onion-food-60d61.firebaseapp.com/static/media/architecture-building-city-2047397.44e1602b.png',
@@ -41,7 +41,7 @@ const Features = () => {
                 </div>
             </div>
             <div className="row">
-                {feature.map(item => <Feature feature={item} />)}
+                {feature.map(item => <Feature feature={item} key={item.key} />)}
             </div>
         </div>
     );

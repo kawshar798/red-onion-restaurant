@@ -14,9 +14,9 @@ const MenuItems = () => {
             <div className="row">
                 <div className="col-lg-12">
                     <ul className="menu-item-nav">
-                        <li onClick={ ()=>setSelectedItem("breakfast")}>Break Fast</li>
-                        <li onClick={ ()=>setSelectedItem("lunch")}>Lunch</li>
-                        <li onClick={ ()=>setSelectedItem("dinner")}>Dinner</li>
+                        <li className={selectedItem==="breakfast"?'active':''} onClick={ ()=>setSelectedItem("breakfast")} >Break Fast</li>
+                        <li className={selectedItem==="lunch"?'active':''} onClick={ ()=>setSelectedItem("lunch")}>Lunch</li>
+                        <li className={selectedItem==="dinner"?'active':''} onClick={ ()=>setSelectedItem("dinner")}>Dinner</li>
 
                     </ul>
                 </div>

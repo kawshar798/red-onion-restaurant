@@ -32,7 +32,7 @@ function App() {
   }
   return (
     <div className="App">
-
+{ console.log(cart)}
       <Router>
         <Switch>
 

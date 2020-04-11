@@ -16,8 +16,11 @@ ul.menu-item-nav li {
     margin-bottom: 0px;
     position: relative;
 }
-ul.menu-item-nav li:after {
-    background: red;
+.active{
+    color: #e51a4b;
+}
+ul.menu-item-nav .active:after {
+    background: #e51a4b;
     height: 3px;
     position: absolute;
     content: "";
@@ -30,6 +33,7 @@ ul.menu-item-nav li:after {
     border-radius: 15px;
     
 }
+
 .singleItem {
     text-align: center;
     background: white;

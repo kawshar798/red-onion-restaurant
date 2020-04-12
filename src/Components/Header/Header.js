@@ -26,7 +26,8 @@ const Header = (props) => {
                     </div>
                     <div className="col-lg-8 d-flex justify-content-end">
                         <nav className="d-flex align-items-center">
-                            <a href="#"><FontAwesomeIcon className="cart-icon" icon={faCartArrowDown} /><span>{props.cart}</span></a>
+                          
+                            <Link to="/shipment"><FontAwesomeIcon className="cart-icon" icon={faCartArrowDown} /><span>{props.cart.length}</span></Link>
                             <Link to="/login">Login</Link>
                             <Link to="/login" className="signup-btn">Sign Up</Link>
                            

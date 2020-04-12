@@ -16,9 +16,11 @@ import Notfound from './Components/Notfound/Notfound';
 import Features from './Components/Features/Features';
 import Login from './Components/Login/Login';
 import { AuthContextProvider } from './Components/Login/useAuth';
+import Shipment from './Components/Shipment/Shipment';
 function App() {
 
   const [cart, setCart] = useState([]);
+
   const cartHandler = (data) => {
     const alreadyAdd = cart.find(cart => cart.key == data.key);
     const newCart = [...cart, data]
@@ -31,6 +33,17 @@ function App() {
       setCart(newCart);
     }
   }
+
+  const handleCheckout = (productKey,productQuantity) =>{
+   const newCart = cart.map( item=>{
+     if(item.key === productKey){
+      item.quantity = productQuantity
+     }
+     return item;
+   });
+   const filteredCart = newCart.filter(item => item.quantity > 0)
+   setCart(filteredCart)
+  }
   return (
     <div className="App">
       <AuthContextProvider>
@@ -39,17 +52,21 @@ function App() {
           <Switch>
 
             <Route exact path="/">
-              <Header cart={cart.length}></Header>
+              <Header cart={cart}></Header>
               <Banner></Banner>
               <MenuItems />
               <Features />
             </Route>
             <Route path="/food/:foodKey">
-              <Header cart={cart.length}></Header>
+              <Header cart={cart}></Header>
               <ItemDetails cartHandler={cartHandler}> </ItemDetails>
             </Route>
             <Route path="/login">
               <Header cart={cart.length}></Header>
+              <Login />
+            </Route>
+            <Route path="/shipment">
+              <Shipment cart={cart} handleCheckout={handleCheckout}/>
               <Login />
             </Route>
             <Route path="*">

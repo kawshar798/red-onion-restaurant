@@ -17,6 +17,7 @@ import Features from './Components/Features/Features';
 import Login from './Components/Login/Login';
 import { AuthContextProvider, PrivateRoute } from './Components/Login/useAuth';
 import Shipment from './Components/Shipment/Shipment';
+import OrderCmoplete from './Components/OrderComplete/OrderCmoplete';
 function App() {
 
   const [cart, setCart] = useState([]);
@@ -67,6 +68,11 @@ function App() {
               <Shipment cart={cart} handleCheckout={handleCheckout} />
               <Footer />
             </PrivateRoute>
+            <Route path="/ordercomplete">
+              <Header cart={cart} />
+             <OrderCmoplete />
+              <Footer />
+            </Route>
             
             <Route path="/login">
               <Header cart={cart} />

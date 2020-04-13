@@ -2,17 +2,25 @@ import React,{useState} from 'react'
 import { useForm } from 'react-hook-form';
 import './Shipment.css'
 import { useAuth } from '../Login/useAuth';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function Shippment(props) {
+    
+    const [deliveryInfo,setDeliveryInfo] = useState(false)
     const auth = useAuth();
     const cart = props.cart;
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, errors } = useForm([]);
     const onSubmit = data => {
-        console.log(data);
+    
+       setDeliveryInfo(true);
     };
 
-
-
+//Cart product  calculate 
     const subtotal = cart.reduce((subtotal,item) => subtotal + (item.price * item.quantity),0);
     const totalQuantity = cart.reduce((qty,item) => qty + item.quantity,0);
     const tax = subtotal / 10;
@@ -32,6 +40,7 @@ function Shippment(props) {
         <div className="container pt-5 pb-5">
             <div className="row">
                 <div className="col-md-8">
+                    {deliveryInfo.length > 0? <h2>ami kawshar</h2>:'kire'}
                 <h4>Edit Delivery Details</h4>
                     <hr/>
                     <form  onSubmit={handleSubmit(onSubmit)} className="py-5">
@@ -103,7 +112,11 @@ function Shippment(props) {
                                 <li>Delivery fee<span>${deliveryFee.toFixed(2)}</span></li>
                                 <li className="total">Total<span>${grandTotal.toFixed(2)}</span></li>
                             </ul>
+                            {
+                            deliveryInfo ?    <Link to="/ordercomplete" className="btn btn-danger btn-block">Check Out Your Food </Link>:
                             <button className="btn btn-secondary btn-block">Check Out Your Food</button>
+                        }
+                           
                         </div>
 
 

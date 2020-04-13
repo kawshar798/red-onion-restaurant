@@ -12,8 +12,9 @@ nav a{
     font-size: 16px;
     color: #000;
     font-weight: 600;
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
+
 nav .signup-btn{
     padding: 5px 18px;
     background:  #dc3545;
@@ -22,4 +23,15 @@ nav .signup-btn{
     border:none;
     display: inline-block;
     
+}
+nav a span {
+    background: #ddd;
+    /* padding: 6px; */
+    height: 17px;
+    width: 17px;
+    line-height: 17px;
+    border-radius: 50%;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
 }

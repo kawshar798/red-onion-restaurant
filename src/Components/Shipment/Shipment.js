@@ -39,7 +39,7 @@ function Shippment(props) {
     return (
         <div className="container pt-5 pb-5">
             <div className="row">
-                <div className="col-md-8">
+                <div className="col-md-6">
                   
                 <h4>Edit Delivery Details</h4>
                     <hr/>
@@ -71,7 +71,7 @@ function Shippment(props) {
                         </div>
                     </form>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 offset-lg-2">
                     <p>From <strong>Gulshan Plaza Restaura GPR</strong></p>
                     <p>Arriving in 20-30min</p>
                     <p>107 Rd No 8</p>
@@ -113,8 +113,8 @@ function Shippment(props) {
                                 <li className="total">Total<span>${grandTotal.toFixed(2)}</span></li>
                             </ul>
                             {
-                            deliveryInfo ?    <Link to="/ordercomplete" className="btn btn-danger btn-block">Check Out Your Food </Link>:
-                            <button className="btn btn-secondary btn-block">Check Out Your Food</button>
+                            deliveryInfo && props.cart.length > 0 ?    <Link to="/ordercomplete" className="btn btn-danger btn-block">Check Out Your Food </Link>:
+                            <button className="btn btn-secondary btn-block">No Item in Check Out</button>
                         }
                            
                         </div>

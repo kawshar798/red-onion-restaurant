@@ -33,7 +33,7 @@ export const PrivateRoute = ({ children, ...rest }) => {
 
                         <Redirect
                             to={{
-                                pathname: "/login",
+                                pathname: "/",
                                 state: { from: location }
                             }}
                         />
@@ -59,7 +59,7 @@ const Auth = () => {
         return firebase.auth().signInWithEmailAndPassword(email,password)
        .then(res => {
            setUser(res.user);
-           window.history.back(); 
+           window.location.pathname = '/shipment';
         })
         .catch(err=> setUser({error: err.message}))
     }
@@ -73,7 +73,7 @@ const Auth = () => {
                 displayName: name
             }).then(() => {
               setUser(res.user);
-              window.history.back(); 
+              window.location.pathname = '/shipment';
             });
         })
         .catch(err=> setUser({error: err.message}))

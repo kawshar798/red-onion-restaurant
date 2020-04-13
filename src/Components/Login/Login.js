@@ -15,10 +15,12 @@ const Login = () => {
         if (returnUser) {
             if (data.email && data.password) {
                 auth.signIn(data.email, data.password);
+               
             }
         } else {
             if (data.name && data.email && data.password && data.confirm_password) {
                 auth.signUp(data.email, data.confirm_password, data.name)
+               
             }
         }
 

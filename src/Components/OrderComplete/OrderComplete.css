@@ -1,3 +1,74 @@
 .biker{
     width: 75px;
 }
+.rider-info {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.rider-info img {
+    width: 75px;
+}
+
+.rider-des {
+    padding-left: 20px;
+}
+
+.rider-des h2 {
+    font-size: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.rider-des p {
+    color: #ddd;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+ul.location-info {
+    padding: 0;
+    list-style: none;
+}
+
+ul.location-info li {
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+ul.location-info li p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #cecaca;
+}
+
+ul.location-info li:after {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: red;
+    content: "";
+    top: 8px;
+    left: -6px;
+    border-radius: 50%;
+}
+
+ul.location-info li:last-child {
+    margin-bottom: 0px;
+}
+
+ul.location-info li:before {
+    background: #ddd;
+    height: 187%;
+    content: "";
+    position: absolute;
+    width: 2px;
+    left: -2px;
+    top: 10px;
+}
+
+ul.location-info li:last-child:before {
+    display: none;
+}

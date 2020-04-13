@@ -3,7 +3,7 @@ import './MenuItems.css'
 import { Link } from 'react-router-dom';
 import fakeData from '../../fakeData';
 import Item from '../Item/Item';
-const MenuItems = () => {
+const MenuItems = (props) => {
     const [foodItems,setFoodItems] = useState(fakeData);
     const [selectedItem, setSelectedItem] = useState("breakfast");
               const slectedItems =   foodItems.filter(item => item.category ===selectedItem)
@@ -23,7 +23,20 @@ const MenuItems = () => {
                     
                 {slectedItems.map(item => <Item item={item} key={item.key} />)}
               
+                <div className="text-center checkout-btn-area">
+                   
+                    {
+                        props.cart.length ? 
+                        <Link to="/checkout">
+                            <button  className="btn btn-danger btn-secondary">Check Out Your Food</button>
+                        </Link>
+                        :
+                        <button disabled className="btn btn-secondary">Check Out Your Food</button>
 
+                    }
+
+                      
+                </div>
             </div>
         </div>
     );

@@ -27,7 +27,6 @@ const Login = () => {
     return (
         <div className="sign-up-area">
             <div className="container pt-5 pb-5">
-                <h2>login page</h2>
                 <div className="row">
                     <div className="col-4 offset-4">
                         <div className="singup-form pt-3 pb-3">

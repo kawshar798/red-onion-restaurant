@@ -40,7 +40,7 @@ function Shippment(props) {
         <div className="container pt-5 pb-5">
             <div className="row">
                 <div className="col-md-8">
-                    {deliveryInfo.length > 0? <h2>ami kawshar</h2>:'kire'}
+                  
                 <h4>Edit Delivery Details</h4>
                     <hr/>
                     <form  onSubmit={handleSubmit(onSubmit)} className="py-5">

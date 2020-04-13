@@ -31,7 +31,7 @@ const Header = (props) => {
                             }
                             {auth.user ?
                               <Link to="/" className="nav-link">
-                                <button onClick={() => {auth.signOut()}} className="btn btn-danger btn-rounded">Sign Out</button>
+                                <button onClick={() => {auth.signOut()}} className="signup-btn">Sign Out</button>
                             </Link>
                             :
                               <Link to="/login" className="signup-btn">Sign Up</Link>

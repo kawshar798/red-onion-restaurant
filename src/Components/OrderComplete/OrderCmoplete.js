@@ -1,18 +1,18 @@
 import React from 'react'
 import Bike from '../../images/bike.png'
 import Rider from '../../images/helmet.png'
-// import Bike from '../../images/bike.png'
+import Map from '../../images/map.png'
 import './OrderComplete.css'
 function OrderCmoplete() {
     return (
-        <div className="container">
+        <div className="container py-5">
             <div className="row">
-                <div className="col-lg-6 offset-2">
+                <div className="col-lg-8 ">
                     <div className="order-complete">
-                        <h2>order complete success</h2>
+                    <img src={Map} alt="bike" className="img-fluid"/>
                     </div>
                 </div>
-                <div className="col-lg-4 mt-5 mb-5">
+                <div className="col-lg-4">
                     <div className="order-complete bg-light p-3 rounded ">
                         <img src={Bike} alt="bike" className="img-fluid biker"/>
                         <div className="bg-white  rounded p-3 my-3">
@@ -41,6 +41,7 @@ function OrderCmoplete() {
                                     <p>Your rider</p>
                                 </div>
                             </div>
+                            <button className="btn btn-danger btn-block rounded mt-5 mb-2">Contact</button>
                             </div>
                     </div>
                 </div>

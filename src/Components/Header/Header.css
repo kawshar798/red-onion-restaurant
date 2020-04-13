@@ -15,8 +15,8 @@ nav a{
     font-weight: 600;
     margin: 0px 2px;
 }
-nav a.signup-btn,
-nav a:hover{
+nav a.signup-btn{
+
     background:  #dc3545;
     color: #fff;
     border-radius: 22px;

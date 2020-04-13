@@ -57,3 +57,7 @@ ul.menu-item-nav .active:after {
 .singleItem:hover{
     box-shadow: 1px 1px 8px 0px #0000003d;
 }
+
+.checkout-btn-area{
+    width: 100%;
+}

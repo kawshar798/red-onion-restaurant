@@ -8,14 +8,14 @@ const Features = () => {
             "key": "B001STKY12",
             "title": 'Fast Delevery',
             "icon":<FontAwesomeIcon className="icon" icon={faBus} />,
-            'img':'https://red-onion-food-60d61.firebaseapp.com/static/media/architecture-building-city-2047397.44e1602b.png',
+            'img':'https://live.staticflickr.com/65535/49769667033_4c3759ec65.jpg',
             'des': "Some quick example text to build on the card title and make up the bulk of the card's content......"
 
         },
         {
             "key": "B009STKY12",
             "title": 'A Good Auto Responder',
-            'img':'https://red-onion-food-60d61.firebaseapp.com/static/media/architecture-building-city-2047397.44e1602b.png',
+            'img':'https://live.staticflickr.com/65535/49770523902_cfa902542c.jpg',
             "icon":<FontAwesomeIcon className="icon" icon={faBell} />,
             'des': "Some quick example text to build on the card title and make up the bulk of the card's content......"
 
@@ -24,7 +24,7 @@ const Features = () => {
             "key": "B0090STKY12",
             "title": 'Home Delivery',
             "icon":<FontAwesomeIcon className="icon" icon={faTruck} />,
-            'img':'https://red-onion-food-60d61.firebaseapp.com/static/media/architecture-building-city-2047397.44e1602b.png',
+            'img':'https://live.staticflickr.com/65535/49769667158_d04aa93de9.jpg',
             'des': "Some quick example text to build on the card title and make up the bulk of the card's content......"
 
         }

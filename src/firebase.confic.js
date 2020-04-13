@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyAQIegeFHvNWi1VT_Gdq_g_HAdLMq5l1lM",
-  authDomain: "first-project-a92e8.firebaseapp.com",
-  databaseURL: "https://first-project-a92e8.firebaseio.com",
-  projectId: "first-project-a92e8",
-  storageBucket: "first-project-a92e8.appspot.com",
-  messagingSenderId: "84136175454",
-  appId: "1:84136175454:web:c5e2b3cfee178bd015d1cf"
+  apiKey: "AIzaSyDWcTPMCEnviwLau2mpeQ2sr1hh4zW8Vxk",
+    authDomain: "hot-onion-restaurant-27577.firebaseapp.com",
+    databaseURL: "https://hot-onion-restaurant-27577.firebaseio.com",
+    projectId: "hot-onion-restaurant-27577",
+    storageBucket: "hot-onion-restaurant-27577.appspot.com",
+    messagingSenderId: "766855074694",
+    appId: "1:766855074694:web:aa5867ad76283906231207"
 };
 // Initialize Firebase
 // firebase.initializeApp(firebaseConfig);

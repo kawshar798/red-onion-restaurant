@@ -15,7 +15,7 @@ import ItemDetails from './Components/ItemDetails/ItemDetails';
 import Notfound from './Components/Notfound/Notfound';
 import Features from './Components/Features/Features';
 import Login from './Components/Login/Login';
-import { AuthContextProvider } from './Components/Login/useAuth';
+import { AuthContextProvider, PrivateRoute } from './Components/Login/useAuth';
 import Shipment from './Components/Shipment/Shipment';
 function App() {
 
@@ -34,15 +34,15 @@ function App() {
     }
   }
 
-  const handleCheckout = (productKey,productQuantity) =>{
-   const newCart = cart.map( item=>{
-     if(item.key === productKey){
-      item.quantity = productQuantity
-     }
-     return item;
-   });
-   const filteredCart = newCart.filter(item => item.quantity > 0)
-   setCart(filteredCart)
+  const handleCheckout = (productKey, productQuantity) => {
+    const newCart = cart.map(item => {
+      if (item.key === productKey) {
+        item.quantity = productQuantity
+      }
+      return item;
+    });
+    const filteredCart = newCart.filter(item => item.quantity > 0)
+    setCart(filteredCart)
   }
   return (
     <div className="App">
@@ -50,23 +50,26 @@ function App() {
 
         <Router>
           <Switch>
-
             <Route exact path="/">
-              <Header cart={cart}></Header>
+              <Header cart={cart} />
               <Banner></Banner>
-              <MenuItems />
+              <MenuItems cart={cart} />
               <Features />
             </Route>
             <Route path="/food/:foodKey">
-              <Header cart={cart}></Header>
+              <Header cart={cart} />
               <ItemDetails cartHandler={cartHandler}> </ItemDetails>
+              <Footer />
             </Route>
+
+            <PrivateRoute path="/shipment">
+              <Header cart={cart} />
+              <Shipment cart={cart} handleCheckout={handleCheckout} />
+              <Footer />
+            </PrivateRoute>
+            
             <Route path="/login">
-              <Header cart={cart.length}></Header>
-              <Login />
-            </Route>
-            <Route path="/shipment">
-              <Shipment cart={cart} handleCheckout={handleCheckout}/>
+              <Header cart={cart} />
               <Login />
             </Route>
             <Route path="*">
@@ -75,7 +78,7 @@ function App() {
           </Switch>
 
         </Router>
-        <Footer />
+      
       </AuthContextProvider>
     </div>
   );

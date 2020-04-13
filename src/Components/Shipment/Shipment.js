@@ -1,18 +1,66 @@
 import React,{useState} from 'react'
+import { useForm } from 'react-hook-form';
 import './Shipment.css'
+import { useAuth } from '../Login/useAuth';
 
 function Shippment(props) {
-    // const [qty,setQty]= useState(props.cart.quantity)
-    // const handleQuantity = (currentItem) =>{
-    //    const  new_qty = currentItem.quantity -1;
-    //    setQty(new_qty);
-    // }
-    // console.log(qty)
+    const auth = useAuth();
+    const cart = props.cart;
+    const { register, handleSubmit, watch, errors } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+    };
+
+
+
+    const subtotal = cart.reduce((subtotal,item) => subtotal + (item.price * item.quantity),0);
+    const totalQuantity = cart.reduce((qty,item) => qty + item.quantity,0);
+    const tax = subtotal / 10;
+    let deliveryFee = 0;
+    if(subtotal> 500 ){
+        deliveryFee = 0;
+    } else if( subtotal > 135){
+        deliveryFee = 20;
+    }else if(subtotal > 0){
+        deliveryFee = 30;
+    }
+
+    const grandTotal = subtotal + deliveryFee + tax;
+
+
     return (
-        <div className="container">
+        <div className="container pt-5 pb-5">
             <div className="row">
                 <div className="col-md-8">
-
+                <h4>Edit Delivery Details</h4>
+                    <hr/>
+                    <form  onSubmit={handleSubmit(onSubmit)} className="py-5">
+                    
+                        <div className="form-group">
+                            <input name="todoor" className="form-control" ref={register({ required: true })}  placeholder="Delivery To Door"/>
+                            {errors.todoor && <span className="error">This Option is required</span>}
+                        </div>
+                        <div className="form-group">
+                            <input name="road" className="form-control" ref={register({ required: true })}  placeholder="Road No"/>
+                            {errors.road && <span className="error">Road No is required</span>}
+                        </div>
+                        <div className="form-group">
+                            <input name="flat" className="form-control" ref={register({ required: true })}  placeholder="Flat, Suite or Floor"/>
+                            {errors.flat && <span className="error">Flat, Suite or Floor is required</span>}
+                        </div>
+                        <div className="form-group">
+                            <input name="businessname" className="form-control" ref={register({ required: true })} placeholder="Business name"/>
+                            {errors.businessname && <span className="error">Business name is required</span>}
+                        </div>
+                        <div className="form-group">
+                            <textarea name="address" ref={register({ required: true })} placeholder="Address" className="form-control" cols="30" rows="2"></textarea>
+                            {errors.address && <span className="error">Password is required</span>}
+                        </div>
+                        
+                        <div className="form-group">
+                            <button className="btn btn-danger btn-block" type="submit">Save & Continue</button>
+                        </div>
+                    </form>
                 </div>
                 <div className="col-lg-4">
                     <p>From <strong>Gulshan Plaza Restaura GPR</strong></p>
@@ -21,7 +69,7 @@ function Shippment(props) {
                     <div className="cart">
 
                         {props.cart.map(item => (
-                            <div className="single-cart-item">
+                            <div className="single-cart-item" key={item.key}>
                                 <div className="item-info">
                                     <div className="item-img">
                                         <img src={item.img} alt="" className="img-fluid" />
@@ -50,11 +98,12 @@ function Shippment(props) {
 
                         <div className="cart-calculate">
                             <ul>
-                                <li>Subtotla<span className="item-qty">4 item</span><span>$4</span></li>
-                                <li> Tax<span>$4</span></li>
-                                <li>Delivery fee<span>$4</span></li>
-                                <li>Total<span>$4</span></li>
+                                <li><span>Subtotal. <span className="item-qty">{totalQuantity} item</span></span><span>${subtotal.toFixed(2)}</span></li>
+                                <li> Tax<span>${tax.toFixed(2)}</span></li>
+                                <li>Delivery fee<span>${deliveryFee.toFixed(2)}</span></li>
+                                <li className="total">Total<span>${grandTotal.toFixed(2)}</span></li>
                             </ul>
+                            <button className="btn btn-secondary btn-block">Check Out Your Food</button>
                         </div>
 
 
@@ -66,5 +115,5 @@ function Shippment(props) {
         </div>
     )
 }
-
 export default Shippment
+

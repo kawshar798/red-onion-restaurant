@@ -12,8 +12,7 @@ import './Header.css'
 import { useAuth } from '../Login/useAuth';
 
 const Header = (props) => {
-//    const auth =  useAuth();
-//     console.log(auth)
+ const auth = useAuth();
     return (
         <div className="header">
             <div className="container">
@@ -26,11 +25,17 @@ const Header = (props) => {
                     </div>
                     <div className="col-lg-8 d-flex justify-content-end">
                         <nav className="d-flex align-items-center">
-                          
                             <Link to="/shipment"><FontAwesomeIcon className="cart-icon" icon={faCartArrowDown} /><span>{props.cart.length}</span></Link>
-                            <Link to="/login">Login</Link>
-                            <Link to="/login" className="signup-btn">Sign Up</Link>
-                           
+                            {auth.user ? <Link to="">{auth.user.displayName}</Link> :
+                                <Link to="/login">Login </Link>
+                            }
+                            {auth.user ?
+                              <Link to="/" className="nav-link">
+                                <button onClick={() => {auth.signOut()}} className="btn btn-danger btn-rounded">Sign Out</button>
+                            </Link>
+                            :
+                              <Link to="/login" className="signup-btn">Sign Up</Link>
+                            }
                         </nav>
 
                     </div>

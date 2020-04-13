@@ -8,12 +8,17 @@
     justify-content: space-between;
     align-items: center;
 }
+.error{
+    color: red;
+}
 
 .item-info img {
     width: 75px;
     border-radius: 60px;
 }
-
+.item-quantity {
+    width: 25%;
+}
 .item-info {
     display: flex;
 }
@@ -47,4 +52,23 @@
 
 .item-quantity button:focus {
     outline: none;
+}
+.cart-calculate {
+    margin-top: 10px;
+}
+
+.cart-calculate ul {
+    padding: 0;
+    list-style: none;
+}
+
+.cart-calculate ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+.cart-calculate ul li.total{
+    font-weight: 600;
 }
